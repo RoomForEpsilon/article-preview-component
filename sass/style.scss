@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Manrope;
+    src: url(../assets/fonts/Manrope/Manrope-VariableFont_wght.ttf);
+    font-weight: 400 700;
+}
+
+
+$grey-900: hsl(217, 19%, 35%);
+$grey-500:  #6e8098; 
+$grey-400: hsl(212, 23%, 69%);
+$grey-200: hsl(210, 46%, 95%);
+$white: #FFF; 
+
+$medium: 500;
+
+$MOBILE_MAX_WIDTH: 660px;
+$TABLET_MAX_WIDTH: 1024px;
+
+
+
+.text-preset-1 {
+    font-family: Manrope, sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.3;
+    letter-spacing: calc(.25/16 * 1rem);
+    font-weight: bold;
+}
+
+.text-preset-2 {
+    font-family: Manrope, sans-serif;
+    font-size: calc(13/16 * 1rem);
+    line-height: 1.4;
+    letter-spacing: .0012em;
+    font-weight: $medium;
+}
+
+.text-preset-2-bold {
+    font-family: Manrope, sans-serif;
+    font-size: calc(13/16 * 1rem);
+    line-height: 1.4;
+    letter-spacing: .0012em;
+    font-weight: bold;
+}
+
+.text-preset-3 {
+    font-family: Manrope, sans-serif;
+    font-size: calc(13/16 * 1rem);
+    line-height: 1.4;
+    letter-spacing: .25rem;
+    font-weight: normal;
+}
+
+body,
+main {
+    width: 100%;
+}
+
+body {
+    background-color: $grey-200;
+}
+
+.card {
+    width: calc(327/375 * 100%);
+    margin: 4rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $white;
+    border-radius: .67rem;
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: .67rem .67rem 0 0;
+}
+
+.card h1 {
+    padding: 2rem 2rem 1.5rem;
+    color: $grey-900;
+}
+
+
+.card p {
+    padding: 0 2rem 3rem;
+    color: $grey-500;
+}
+
+.avatar-button-wrapper {
+    padding: 1rem 2rem 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.avatar-wrapper {
+    display: flex;
+}
+
+.avatar-image {
+    border-radius: 50%;
+    margin-right: 1rem;
+    width: 2.5rem;
+    height: auto;
+}
+
+.name-date-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.name {
+    color: $grey-900;
+}
+
+.date {
+    color: $grey-400;
+}
+
+.share-button {
+    border-radius: 50%;
+    background-color: $grey-200;
+    background-image: url(../images/icon-share.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 2rem;
+    height: 2rem;
+    border: none;
+}
+
+.avatar-wrapper[hidden] {
+    display: none;
+}
+
+.avatar-is-hidden {
+    background-color: $grey-900;
+    border-radius: 0 0 .67rem .67rem;
+}
+
+.social-links-wrapper {
+    background-color: $grey-900;
+    color: white; 
+    display: flex;
+}
+
+.social-links-wrapper[hidden] {
+    display: none; 
+}
+
+.social-links-wrapper span {
+    padding-right: 1rem;
+}
+
+.social-links-wrapper img {
+    padding: 0 .5rem;
+}
+
+.button-is-clicked {
+    background-color: $grey-500;
+}
+
+.share-button.button-is-clicked::before {
+    content: "";
+    mask-image: url(../images/icon-share.svg);
+    mask-size: auto;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: $white;
+    width: 2rem;
+    height: 2rem;
+    display: block;
+
+}
+
+.attribution { font-size: 0.6875rem; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media ($MOBILE_MAX_WIDTH < width) {
+
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    main {
+      flex: 1; 
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .card {
+        flex-direction: row;
+        width: calc(608/660 * 100%);
+        max-width: 46rem;
+    }
+
+    .card-image {
+        width: calc(229/608 * 100%);
+        object-fit: cover;
+        object-position: center;
+        border-radius: .67rem 0 0 .67rem;
+        align-self: stretch;
+    }
+
+    .avatar-wrapper[hidden] {
+        display: flex;
+    }
+
+    .avatar-button-wrapper {
+        background-color: $white;
+        border-radius: 0 0 .67rem 0;
+    }
+
+    .social-links-wrapper {
+        position: absolute;
+        padding: 1rem 2.5rem;
+        border-radius: .67rem;
+        right: -2rem;
+        bottom: 4rem;
+        margin-right: 1rem;
+    }
+
+    .social-links-wrapper::before {
+        content: "";
+        width: 0;
+        height: 0;
+        border: 20px solid;
+        border-color: $grey-900 transparent transparent transparent;
+        position: absolute;
+        bottom: -2rem;
+        right: 2.75rem;
+    }
+
+}

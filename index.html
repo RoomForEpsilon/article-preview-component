@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="description" content="An article preview about adding furniture in your home.">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./stylesheets/style.css">
+  <script src="./scripts/script.js" defer></script>
+  <title>Frontend Mentor | Article preview component</title>
+</head>
+<body>
+
+  <main>
+    <article class="card">
+      <img 
+        class="card-image"
+        src="./images/drawers.jpg" 
+        alt="" 
+        width="660"
+        height="528">
+      <div class="text-wrapper">
+        <h1 class="text-preset-1">Shift the overall look and feel by adding these wonderful 
+        touches to furniture in your home</h1>
+
+        <p class="text-preset-2">Ever been in a room and felt like something was missing? Perhaps 
+        it felt slightly bare and uninviting. I’ve got some simple tips 
+        to help you make any room feel complete.</p>
+
+        <div class="avatar-button-wrapper">
+          <div class="avatar-wrapper">
+            <img 
+              class="avatar-image"
+              src="./images/avatar-michelle.jpg"
+              alt=""
+              width="175"
+              height="175">
+            <div class="name-date-wrapper">
+              <span class="name text-preset-2-bold">Michelle Appleton</span>
+              <span class="date text-preset-2">28 Jun 2020</span>
+            </div>
+          </div>
+          <div class="social-links-wrapper" id="social-links-wrapper" aria-expanded="false" hidden>
+            <span class="text-preset-3">SHARE</span>
+            <img src="./images/icon-facebook.svg" alt="Facebook">
+            <img src="./images/icon-twitter.svg" alt="Twitter">
+            <img src="./images/icon-pinterest.svg" alt="Pinterest">
+          </div>
+          <button class="share-button" aria-label="Share article" aria-controls="social-links-wrapper"></button>
+        </div>
+      </div>
+    </article>
+  </main>
+  
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">John</a>.
+  </footer>
+</body>
+</html>

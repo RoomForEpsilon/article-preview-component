@@ -20,9 +20,6 @@ $white: #FFF;
 $medium: 500;
 
 $MOBILE_MAX_WIDTH: 660px;
-$TABLET_MAX_WIDTH: 1024px;
-
-
 
 .text-preset-1 {
     font-family: Manrope, sans-serif;
@@ -172,7 +169,6 @@ body {
 .share-button.button-is-clicked::before {
     content: "";
     mask-image: url(../images/icon-share.svg);
-    mask-size: auto;
     mask-repeat: no-repeat;
     mask-position: center;
     background-color: $white;
@@ -210,8 +206,6 @@ body {
 
     .card-image {
         width: calc(229/608 * 100%);
-        object-fit: cover;
-        object-position: center;
         border-radius: .67rem 0 0 .67rem;
         align-self: stretch;
     }

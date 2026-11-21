@@ -156,7 +156,6 @@ body {
 .share-button.button-is-clicked::before {
   content: "";
   mask-image: url(../images/icon-share.svg);
-  mask-size: auto;
   mask-repeat: no-repeat;
   mask-position: center;
   background-color: #FFF;
@@ -195,8 +194,6 @@ body {
   }
   .card-image {
     width: 37.6644736842%;
-    object-fit: cover;
-    object-position: center;
     border-radius: 0.67rem 0 0 0.67rem;
     align-self: stretch;
   }

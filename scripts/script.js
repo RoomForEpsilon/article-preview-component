@@ -1,12 +1,22 @@
 const button = document.querySelector('button');
 button.addEventListener('click', () => {
-    const avatar_wrapper = document.getElementsByClassName("avatar-wrapper")[0];
-    avatar_wrapper.hidden = true;
-    const social_links_wrapper = document.getElementsByClassName("social-links-wrapper")[0];
-    social_links_wrapper.hidden = false;
-    const avatar_button_wrapper = document.querySelector(".avatar-button-wrapper");
-    avatar_button_wrapper.classList.add("avatar-is-hidden");
 
-    button.classList.add("button-is-clicked");
-    button.ariaExpanded = "true";
+    const avatarWrapper = document.getElementsByClassName("avatar-wrapper")[0];
+    const socialLinksWrapper = document.getElementsByClassName("social-links-wrapper")[0];
+    const avatarButtonWrapper = document.querySelector(".avatar-button-wrapper");
+ 
+    if (avatarWrapper.hidden === false) {
+    
+        avatarWrapper.hidden = true;
+        socialLinksWrapper.hidden = false;
+        avatarButtonWrapper.classList.add("avatar-is-hidden");
+        button.classList.add("button-is-clicked");
+        button.ariaExpanded = "true";
+    } else {
+        avatarWrapper.hidden = false;
+        socialLinksWrapper.hidden = true;
+        avatarButtonWrapper.classList.remove("avatar-is-hidden");
+        button.classList.remove("button-is-clicked");
+        button.ariaExpanded = "false";
+    }
 });

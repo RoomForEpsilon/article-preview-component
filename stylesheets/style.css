@@ -126,6 +126,10 @@ body {
   display: none;
 }
 
+.share-button:hover {
+  background-color: hsl(212, 23%, 69%);
+}
+
 .avatar-is-hidden {
   background-color: hsl(217, 19%, 35%);
   border-radius: 0 0 0.67rem 0.67rem;

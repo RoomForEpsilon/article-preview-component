@@ -139,6 +139,10 @@ body {
     display: none;
 }
 
+.share-button:hover {
+    background-color: $grey-400;
+}
+
 .avatar-is-hidden {
     background-color: $grey-900;
     border-radius: 0 0 .67rem .67rem;

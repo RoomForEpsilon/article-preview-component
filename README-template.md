@@ -30,19 +30,11 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![](./images/screenshot.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [GitHub repo here](https://github.com/RoomForEpsilon/article-preview-component)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
@@ -52,71 +44,32 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+This is the second project where I used flex as a row instead of a column, and figuring out how to fit the image to take up the entire height of the card was difficult, and I'm not sure I'll be able to quickly get it working the next time I have to do that again.  Still, I have a better understanding of why it wasn't working: Height does not behave like width, so height: 100% doesn't give the image 100% of the height of the parent if the parent hasen't been given a height.  In order to solve this issue, I ended up setting the container to flex, and then setting align-self: stretch on the image.
 
-To see how you can add code snippets, see below:
+Another thing I learned was using the aria-expanded and aria-controlls attributes.  Since the social media links box is hidden when the page is loaded, aria-expanded and controlls helps screen readers make sense of that part of the page.
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+The actual JavaScript part wasn't that hard, because I read a little from a Javascript textbook.  It felt like nienty percent of this project was styling the page, ten percent was javascript. 
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+I don't believe there is a next step for this particular project, but I would definitely use what I've learned on this project if I needed to create part of a page that functioned like an article preview.  
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Article about the problem of percentage-based heights](https://www.joshwcomeau.com/css/height-enigma/) - This article helped me understand the issue with setting an image with height: 100% and not having the image take up the height of its container.
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Video about aria attributes](https://www.youtube.com/watch?v=iiD8TAI1PBM) - This YouTube video explained aria-expanded and aria-controls.  What I really liked is the suggestion for developers to use a screen reader to check how their websites are used by screen readers.
 
 ### AI Collaboration
 
-Describe how you used AI tools (if any) during this project. This helps demonstrate your ability to work effectively with AI assistants.
-
-- What tools did you use (e.g., ChatGPT, Claude, GitHub Copilot)?
-- How did you use them (e.g., debugging, generating boilerplate, brainstorming solutions)?
-- What worked well? What didn't?
-
-**Note: Delete this note and the content above if you didn't use AI, or replace with your own experience.**
+I used ChatGPT for some questions and for reviewing my project.  I invested a lot of time reading through articles or posts rather than asking ChatGPT for a quick answer.  I think using AI for answers can provide the same learning experience as not using AI more quickly, but it can also easily solve problems for me that prevents me from learning.  Reading articles and posts helped me to wrap my head around some problems, like why height: 100% wasn't working, so I think its good to have that as part of my learning repitoire.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Frontend Mentor - [@RoomForEpsilon](https://www.frontendmentor.io/profile/RoomForEpsilon)

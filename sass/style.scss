@@ -21,6 +21,13 @@ $medium: 500;
 
 $MOBILE_MAX_WIDTH: 660px;
 
+@mixin textPreset2RepeatedValues {
+    font-family: Manrope, sans-serif;
+    font-size: calc(13/16 * 1rem);
+    line-height: 1.4;
+    letter-spacing: .0012em;
+}
+
 .text-preset-1 {
     font-family: Manrope, sans-serif;
     font-size: 1.25rem;
@@ -30,18 +37,12 @@ $MOBILE_MAX_WIDTH: 660px;
 }
 
 .text-preset-2 {
-    font-family: Manrope, sans-serif;
-    font-size: calc(13/16 * 1rem);
-    line-height: 1.4;
-    letter-spacing: .0012em;
+    @include textPreset2RepeatedValues();
     font-weight: $medium;
 }
 
 .text-preset-2-bold {
-    font-family: Manrope, sans-serif;
-    font-size: calc(13/16 * 1rem);
-    line-height: 1.4;
-    letter-spacing: .0012em;
+    @include textPreset2RepeatedValues();
     font-weight: bold;
 }
 
@@ -49,7 +50,7 @@ $MOBILE_MAX_WIDTH: 660px;
     font-family: Manrope, sans-serif;
     font-size: calc(13/16 * 1rem);
     line-height: 1.4;
-    letter-spacing: .25rem;
+    letter-spacing: .25em;
     font-weight: normal;
 }
 
@@ -72,11 +73,14 @@ body {
     border-radius: .67rem;
 }
 
+// fill, contain, cover, scale-down
+
 .card-image {
     width: 100%;
     height: auto;
     object-fit: cover;
     border-radius: .67rem .67rem 0 0;
+    aspect-ratio: 327 / 200;
 }
 
 .card h1 {
@@ -141,6 +145,7 @@ body {
 
 .share-button:hover {
     background-color: $grey-400;
+    cursor: pointer;
 }
 
 .avatar-is-hidden {
@@ -152,6 +157,8 @@ body {
     background-color: $grey-900;
     color: white; 
     display: flex;
+    align-items: center;
+
 }
 
 .social-links-wrapper[hidden] {
@@ -170,7 +177,7 @@ body {
     background-color: $grey-500;
 }
 
-.share-button.button-is-clicked::before {
+.share-button .button-is-clicked::before {
     content: "";
     mask-image: url(../images/icon-share.svg);
     mask-repeat: no-repeat;
@@ -204,7 +211,7 @@ body {
 
     .card {
         flex-direction: row;
-        width: calc(608/660 * 100%);
+        width: calc(608/768 * 100%);
         max-width: 46rem;
     }
 
@@ -212,6 +219,7 @@ body {
         width: calc(229/608 * 100%);
         border-radius: .67rem 0 0 .67rem;
         align-self: stretch;
+        object-fit: cover;
     }
 
     .avatar-wrapper[hidden] {

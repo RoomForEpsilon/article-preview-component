@@ -37,7 +37,7 @@
   font-family: Manrope, sans-serif;
   font-size: 0.8125rem;
   line-height: 1.4;
-  letter-spacing: 0.25rem;
+  letter-spacing: 0.25em;
   font-weight: normal;
 }
 
@@ -65,6 +65,7 @@ body {
   height: auto;
   object-fit: cover;
   border-radius: 0.67rem 0.67rem 0 0;
+  aspect-ratio: 327/200;
 }
 
 .card h1 {
@@ -128,6 +129,7 @@ body {
 
 .share-button:hover {
   background-color: hsl(212, 23%, 69%);
+  cursor: pointer;
 }
 
 .avatar-is-hidden {
@@ -139,6 +141,7 @@ body {
   background-color: hsl(217, 19%, 35%);
   color: white;
   display: flex;
+  align-items: center;
 }
 
 .social-links-wrapper[hidden] {
@@ -157,7 +160,7 @@ body {
   background-color: #6e8098;
 }
 
-.share-button.button-is-clicked::before {
+.share-button .button-is-clicked::before {
   content: "";
   mask-image: url(../images/icon-share.svg);
   mask-repeat: no-repeat;
@@ -193,13 +196,14 @@ body {
   }
   .card {
     flex-direction: row;
-    width: 92.1212121212%;
+    width: 79.1666666667%;
     max-width: 46rem;
   }
   .card-image {
     width: 37.6644736842%;
     border-radius: 0.67rem 0 0 0.67rem;
     align-self: stretch;
+    object-fit: cover;
   }
   .avatar-wrapper[hidden] {
     display: flex;

@@ -132,6 +132,17 @@ body {
   cursor: pointer;
 }
 
+.share-button:hover::before {
+  content: "";
+  mask-image: url(../images/icon-share.svg);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  background-color: #FFF;
+  width: 2rem;
+  height: 2rem;
+  display: block;
+}
+
 .avatar-is-hidden {
   background-color: hsl(217, 19%, 35%);
   border-radius: 0 0 0.67rem 0.67rem;
@@ -160,7 +171,7 @@ body {
   background-color: #6e8098;
 }
 
-.share-button .button-is-clicked::before {
+.button-is-clicked::before {
   content: "";
   mask-image: url(../images/icon-share.svg);
   mask-repeat: no-repeat;
